@@ -6,6 +6,7 @@ import '../screens/games/lucky_wheel_game.dart';
 import '../screens/games/scratch_card_game.dart';
 import '../screens/games/plant_watering_test_screen.dart';
 import '../screens/games/whack_mole_game.dart';
+import '../screens/games/memory_game_screen.dart';
 
 class GameCardWidget extends StatelessWidget {
   final GameInfo game;
@@ -100,6 +101,9 @@ class GameCardWidget extends StatelessWidget {
                           break;
                         case 'whack_mole':
                           gameScreen = const WhackMoleGameScreen();
+                          break;
+                        case 'memory':
+                          gameScreen = const MemoryGameScreen();
                           break;
                         default:
                           gameScreen = PlaceholderGameScreen(game: game);
