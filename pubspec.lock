@@ -264,6 +264,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.2"
+  scratch_card:
+    dependency: "direct main"
+    description:
+      name: scratch_card
+      sha256: e8ab61c72d85d5cd7144f48700f527090a69d648568bffc9906604435b425b7d
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   shared_preferences:
     dependency: "direct main"
     description:

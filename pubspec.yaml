@@ -38,6 +38,9 @@ dependencies:
   # Lucky Wheel
   flutter_fortune_wheel: ^1.3.2
 
+  # Scratch Card
+  scratch_card: ^1.0.2
+
   # State Management - BLoC Pattern
   flutter_bloc: ^8.1.3
   bloc: ^8.1.2

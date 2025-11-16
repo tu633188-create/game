@@ -3,22 +3,18 @@ import '../models/game_info_model.dart';
 import 'game_info_dialog.dart';
 import '../screens/games/placeholder_game_screen.dart';
 import '../screens/games/lucky_wheel_game.dart';
+import '../screens/games/scratch_card_game.dart';
 
 class GameCardWidget extends StatelessWidget {
   final GameInfo game;
 
-  const GameCardWidget({
-    super.key,
-    required this.game,
-  });
+  const GameCardWidget({super.key, required this.game});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -47,15 +43,15 @@ class GameCardWidget extends StatelessWidget {
                       Text(
                         game.name,
                         style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       const SizedBox(height: 4),
                       Text(
                         game.description,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Colors.grey[600],
-                            ),
+                          color: Colors.grey[600],
+                        ),
                       ),
                     ],
                   ),
@@ -94,6 +90,9 @@ class GameCardWidget extends StatelessWidget {
                         case 'lucky_wheel':
                           gameScreen = const LuckyWheelGameScreen();
                           break;
+                        case 'scratch_card':
+                          gameScreen = const ScratchCardGameScreen();
+                          break;
                         default:
                           gameScreen = PlaceholderGameScreen(game: game);
                       }
@@ -117,4 +116,3 @@ class GameCardWidget extends StatelessWidget {
     );
   }
 }
-
