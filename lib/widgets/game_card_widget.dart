@@ -4,6 +4,7 @@ import 'game_info_dialog.dart';
 import '../screens/games/placeholder_game_screen.dart';
 import '../screens/games/lucky_wheel_game.dart';
 import '../screens/games/scratch_card_game.dart';
+import '../screens/games/plant_watering_test_screen.dart';
 
 class GameCardWidget extends StatelessWidget {
   final GameInfo game;
@@ -92,6 +93,9 @@ class GameCardWidget extends StatelessWidget {
                           break;
                         case 'scratch_card':
                           gameScreen = const ScratchCardGameScreen();
+                          break;
+                        case 'plant_watering':
+                          gameScreen = const PlantWateringTestScreen();
                           break;
                         default:
                           gameScreen = PlaceholderGameScreen(game: game);
